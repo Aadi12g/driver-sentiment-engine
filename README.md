@@ -1,4 +1,4 @@
-# driver-sentiment-engine
+# Driver-sentiment-engine
 
 The Driver Sentiment Engine processes employee trip feedback in real time, calculates sentiment scores, updates performance metrics, and raises alerts for risky drivers — all with efficient, scalable, and secure design principles.
 
@@ -116,10 +116,17 @@ Logging: Monitoring
 
 📦 Tech Stack
 Layer	Technology
+
 Backend	Python, Flask
+
 Authentication	PyJWT
+
 UI	HTML, Bootstrap 5, JavaScript
+
 Graphs	Matplotlib
+
 Storage	JSON-based filesystem storage
+
 Concurrency	Python Queue + Threading
+
 Monitoring	Logging with RotatingFileHandler
