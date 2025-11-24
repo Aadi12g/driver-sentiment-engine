@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 # Config
 
 app = Flask(__name__)
-SECRET = "super_secret_jwt_key_change_me"   # keep constant for demo
+SECRET = "super_secret_jwt_key_change_me"   
 GRAPH_PATH = os.path.join("static", "graph.png")
 SCHEMA_PATH = "form_schema.json"
 DATA_PATH = "data.json"
@@ -223,7 +223,6 @@ def gen_jwt(username, role):
 def decode_token(token):
     try:
         data = jwt.decode(token, SECRET, algorithms=["HS256"])
-        # check server instance match — tokens from old server runs will fail here
         if data.get("inst") != INSTANCE_ID:
             logger.info("Token rejected due to differing instance id")
             return None
